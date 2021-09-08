@@ -68,12 +68,12 @@ expect(elementsArray).toHaveLength(7);
     - comes with create-react-app
 
 > How does Jest Work?  
-global test method has two argument:  
-[1] string description  
-[2] test function  
-Test fails if error is thrown when running function:  
-[1] assertions throw errors when expectation fails  
-No Error -> tests pass
-[1] Empty test passes!
+> 1. global test method has two argument:  
+> - [1] string description  
+> - [2] test function  
+> 2. Test fails if error is thrown when running function:  
+> - [1] assertions throw errors when expectation fails  
+> 3. No Error -> tests pass
+> - [1] Empty test passes!
 
 `npm test or yarn test`
