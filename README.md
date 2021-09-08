@@ -29,4 +29,11 @@ expect(element).toBeInTheDocument()
 ```
 
 > Assertion?  
-> test to success or fail
+> 프로그램의 특정 지점에 위치한 Assertion은 해당 지점에서 개발자가 반드시 참(true)이어야 한다고 생각하는 사항을 표현한 논리식이다.
+
+## Assertion
+1. expect
+  - Jest global, starts the assertion
+2. matcher
+  - type of assertion
+  - this matcher comes from Jest-DOM
