@@ -33,7 +33,38 @@ expect(element).toBeInTheDocument()
 
 ## Assertion
 1. expect
-  - Jest global, starts the assertion
+    - Jest global, starts the assertion
 2. matcher
-  - type of assertion
-  - this matcher comes from Jest-DOM
+    - type of assertion
+    - this matcher comes from Jest-DOM
+
+```js
+expect(linkElement).toBeInTheDocument();
+//expect argument - subject of the assertion [expect]
+//matcher argument - refines matcher [toBeInTheDocument]
+
+expect(element.textContent).toBe("Hello");
+//expect argument - subject of the assertion [expect]
+//matcher argument - refines matcher [toBe]
+
+expect(elementsArray).toHaveLength(7);
+```
+
+3. jest-dom
+    - comes with create-react-app
+    - src/setupTests.js imports it before each test, makes matchers available
+    - DOM-based matchers
+        - example: toBeVisible() or toBeChecked()
+
+## Jest
+- React Testing Library helps with
+    - rendering components into virtual DOM
+    - searching virtual DOM
+    - Interacting with virtual DOM
+- Needs a test runner
+    - Find tests, run them, make assertions
+- Jest
+    - is recommended by Testing Library
+    - comes with create-react-app
+
+`npm test or yarn test`
