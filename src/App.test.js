@@ -18,7 +18,13 @@ test('button toggles blue and red when clicked',()=>{
   expect(colorButton).toHaveStyle({backgroundColor:'blue'});
   expect(colorButton.textContent).toBe('Change to red')
 
-  fireEvent.click(colorButton);
-  expect(colorButton).toHaveStyle({backgroundColor:'red'});
-  expect(colorButton.textContent).toBe('Change to blue')
+})
+
+test('initial conditions', ()=>{
+  render(<App/>)
+  const colorButton = screen.getByRole('button', {name:'Change to blue'})
+  expect(colorButton).toBeEnabled();
+
+  const checkbox = screen.getByRole('checkbox')
+  expect(checkbox).not.toBeChecked();
 })

@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
 import { useState } from 'react';
+import './App.css';
 
 function App() {
 
   const [backgroundColor,setBackgroundColor] = useState('red')
+  const newButtonColor = backgroundColor === "red" ? "blue" : "red"
 
   const handleChangeBackgroundColor = ()=>{
-    setBackgroundColor(prev => prev === "red" ? "blue" : "red")
+    setBackgroundColor(newButtonColor)
   }
 
   return (
@@ -15,8 +15,9 @@ function App() {
       <button 
         onClick={handleChangeBackgroundColor}
         style={{backgroundColor}}>
-          Change to {backgroundColor === "red" ? "blue" : "red"}
+          Change to {newButtonColor}
       </button>
+      <input type="checkbox" />
     </div>
   );
 }
