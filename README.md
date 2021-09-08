@@ -28,7 +28,7 @@ expect(element).toBeInTheDocument()
 */
 ```
 
-> Assertion?  
+> Assertion? [ko]:
 > 프로그램의 특정 지점에 위치한 Assertion은 해당 지점에서 개발자가 반드시 참(true)이어야 한다고 생각하는 사항을 표현한 논리식이다.
 
 ## Assertion
@@ -77,3 +77,60 @@ expect(elementsArray).toHaveLength(7);
 > - [1] Empty test passes!
 
 `npm test or yarn test`
+
+
+## TDD (Test-Driven Development)
+- Write tests before writing code
+    - then write code according to "spec" set by tests
+- "red-green" testing
+    - Tests fail before code is written
+
+1. Write "shell" function
+2. Write tests
+3. Tests fail
+4. Write code
+5. Tests pass!
+
+### Why TDD?
+- Makes a huge difference in how it feels to write tests
+    - part of the coding process, not a "chore" to do at the end
+- More efficient
+    - Re-run tests "for free" after changes
+
+## React Testing Library Philosophy?
+- Creates virtual DOM for testing
+    - and utilities for interacting with DOM
+- Allows testing without a browser
+
+## Types of Tests
+- Unit tests
+    - Tests one unit of code in isolation
+- Integration tests
+    - How multiple units work together
+- Functional Tests
+    - Tests a particular function of software
+- Acceptance / End-to-end (E2E) Tests
+    - Use actual browser and server (Cypress, Selenium)
+
+## Function Testing vs Unit Testing
+1. different mindset from unit testing
+    - Unit Testing
+        - Isolated: mock dependencies, test internals
+        - Very easy to pinpoint failures
+        - 👎Further from how users interact with software
+        - 👎More likely to break with refactoring
+    - Functional Testing
+        - Include all relevant units, test behavior
+        - Close to how users interact with software
+        - Robust tests
+        - 👎More difficult to debug failing tests
+
+## TDD vs BDD
+- Quick detour for BDD: Behavior-Driven Development
+- Testing Library encourage testing behavior over implementation
+- So shouldn't we be calling this BDD instead of TDD?
+    - actually, no.
+- BDD is very explicitly defined
+    - involves collaboration between lots of roles
+        - developers, QA, business partners, etc
+    - defines process for different groups to interact
